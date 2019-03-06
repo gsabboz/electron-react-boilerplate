@@ -4,6 +4,9 @@ import { AppContainer } from 'react-hot-loader';
 import Root from './containers/Root';
 import { configureStore, history } from './store/configureStore';
 import './app.global.css';
+import { startOpcuaServer } from './opcua/opcua-server';
+
+startOpcuaServer();
 
 const store = configureStore();
 
