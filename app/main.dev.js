@@ -14,6 +14,10 @@ import { app, BrowserWindow } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
+import { startOpcuaServer } from './opcua/opcua-server';
+
+console.log("electron start");
+startOpcuaServer();
 
 export default class AppUpdater {
   constructor() {
